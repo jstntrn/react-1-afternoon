@@ -1,34 +1,25 @@
 import React, { Component } from 'react';
 
-/*
-data being passed in:
-Original: [ 
-{ "name": "Jimmy Joe", "title": "Hack0r", "age": 12 }, 
-{ "name": "Jeremy Schrader", "age": 24, "hairColor": "brown" }, 
-{ "name": "Carly Armstrong", "title": "CEO" } 
-]
-*/
-
 class FilterObject extends Component {
     constructor(){
         super()
         this.filterArray = this.filterArray.bind(this)
 
         this.state = {
-            unFilteredArray: [{"name": "Jimmy Joe", "title": "Hack0r", "age": 12 }, 
-            { "name": "Jeremy Schrader", "age": 24, "hairColor": "brown" }, 
-            { "name": "Carly Armstrong", "title": "CEO" }],
+            unFilteredArray: [{"make": "Lamborghini", "model": "Gallardo", "miles": 35000 }, 
+            { "make": "Ferrari", "year": "2015", "price": 135000 }, 
+            { "make": "Aston Martin", "color": "Grey" }],
             userInput: '',
             filteredArray: []
         }
     }
-
+    
     updateInput(value) {
         this.setState({
             userInput: value
         })
     }
-
+    
     filterArray(str){
         let newArr = this.state.unFilteredArray.filter(el => el[str]) //needed to put str in bracket notation in order to pass in variable
         this.setState({
