@@ -17,16 +17,15 @@ class Palindrome extends Component {
     }
 
     updatePalindrome(str){
-        console.log(str);
-        
-
         let strArr = str.split('')
         console.log(strArr);
         
         let revArr = []
+
         for(let i=strArr.length-1; i>=0; i--){
             revArr.push(strArr[i])
         }
+
         let revStr = revArr.join('')
         console.log(revStr);
         
@@ -39,7 +38,6 @@ class Palindrome extends Component {
                 palindrome: 'false'
             })
         }
-        
         
     }
 
