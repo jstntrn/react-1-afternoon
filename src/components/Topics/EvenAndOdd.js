@@ -37,10 +37,10 @@ class EvenAndOdd extends Component {
                 <div className="puzzleBox evenAndOddPB">
                     <h4>Evens and Odds</h4>
                     <input className="inputLine"
-                        onChange = { (e) => this.updateInput(e.target.value) }
-                        value = {this.state.userInput}/>
+                        onChange={ (e) => this.updateInput(e.target.value) }
+                        value={this.state.userInput}/>
                     <button className="confirmationButton"
-                        onClick = { (e) => this.splitArray(this.state.userInput) }>Split</button>
+                        onClick={ (e) => this.splitArray(this.state.userInput) }>Split</button>
                     <span className="resultsBox">{`Evens: [${this.state.evenArray}]`}</span>
                     <span className="resultsBox">{`Odds: [${this.state.oddArray}]`}</span>
                 </div>
