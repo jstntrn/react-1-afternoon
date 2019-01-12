@@ -41,7 +41,7 @@ class Sum extends Component {
                     <input className="inputLine"
                         onChange={ (e) => this.updateNumber2(e.target.value)}
                         value={this.state.number2}/>
-                    <button className="confirmationBox"
+                    <button className="confirmationButton"
                         onClick={ () => this.calcSum(this.state.number1, this.state.number2)}>Add</button>
                     <span className="resultsBox">Sum: {this.state.sum}</span>
                 </div>
